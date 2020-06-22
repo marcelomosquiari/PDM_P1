@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 class Descricao extends StatelessWidget {
   static String tag = 'descricao';
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,6 +98,3 @@ class Descricao extends StatelessWidget {
 
   }
 }
-
-
-
