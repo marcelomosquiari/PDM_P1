@@ -45,7 +45,7 @@ class Descricao extends StatelessWidget {
                 
                 style: TextStyle(fontStyle: FontStyle.normal, fontSize: 20),                                        
                 children: <TextSpan>[
-                  TextSpan(text: "Obrigado por sua visita! O Portal do Setor é um App onde profissionais liberais, de diversas áreas podem se cadastrar para oferecer seus serviços aos consumidores em geral. A mesma ferramenta serve para que estes mesmos consumidores pesquisem sobre a melhor opção para suas necessidades. ", 
+                  TextSpan(text: "Obrigado por sua visita! O Portal do Setor é um App onde profissionais liberais, de diversas áreas, podem se cadastrar para oferecer seus serviços aos consumidores em geral. A mesma ferramenta serve para que estes mesmos consumidores pesquisem sobre a melhor opção para suas necessidades. ", 
                   style: TextStyle(fontStyle: FontStyle.normal),),
                ],
               ),
