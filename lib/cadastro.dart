@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_p1/profissionais.dart';
 
 
 
 class Cadastro extends StatelessWidget {
-  static String tag = 'cadastro';
+  static String tag = '/pagina3';
+  
     @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Cadastro de Profissionais Liberais"),
-          backgroundColor: Colors.grey,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Cadastro de Profissionais Liberais"),
+        backgroundColor: Colors.grey,
         ),
         body: ListView2(),
-      ),
+      
     );
   }
 }
@@ -138,16 +138,14 @@ class _ListView2State extends State<ListView2> {
             RaisedButton(
               child: Text("Próxima"),
               onPressed: () {
-
-                
-                Navigator.pushNamed(context, '/pagina4');
-
-
-
+               
+                Navigator.push(context, MaterialPageRoute(builder: (context) =>
+                Profissionais())
+              );
               },
             ),
 
-            SizedBox(height: 10,),
+            SizedBox(height: 5,),
 
             RaisedButton(
               child: Text("Voltar"),
@@ -157,9 +155,7 @@ class _ListView2State extends State<ListView2> {
             ),
           
           
-        ],
-        
-      ),
+        ],),
       
       
     );
@@ -167,55 +163,3 @@ class _ListView2State extends State<ListView2> {
     
   }
 }
-  
-  
-  
-  
-  
-
-
-/*import 'package:flutter/material.dart';
-
-class TerceiraPagina extends StatelessWidget {
-  static String tag = 'terceira_pagina';
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-         title: Text("Lista de Serviços Cadastrados"), 
-         backgroundColor: Colors.grey,   
-          automaticallyImplyLeading: false,    
-     ),
-    
-     body: Center(
-        child: ListView(
-
-           
-
-          children: <Widget>[
-
-            Padding(padding: EdgeInsets.only(top: 450),), 
-
-              RaisedButton(        
-                child: Text("Próxima"),
-                onPressed: () {
-                
-                Navigator.pushNamed(context, '/pagina4');
-              },
-            ),
-              
-              SizedBox(height: 20,),
-              
-              RaisedButton(
-              child: Text("Voltar"),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
-
-          ], 
-     
-       ),
-     ),
-    );
- }*/
