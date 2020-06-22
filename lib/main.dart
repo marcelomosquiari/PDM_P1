@@ -14,12 +14,13 @@ void main() {
     MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Portal do Setor',
+        
 
         
         initialRoute: '/pagina1',
         routes: {
           '/pagina1': (context) => LoginPage(),
-          '/pagina2': (context) => MenuApp(),
+          '/pagina2': (context) => Menuapp(),
           '/pagina3': (context) => Cadastro(),
           '/pagina4': (context) => Profissionais(),          
           '/pagina5': (context) => Contato(),
@@ -28,8 +29,3 @@ void main() {
         }),
   );
 }
-
-
-
-
-
