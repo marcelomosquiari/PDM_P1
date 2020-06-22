@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_p1/descricao.dart';
+
 
 
 class Contato extends StatelessWidget {
   static String tag = 'contato';
+ 
   
   @override
   Widget build(BuildContext context) {
@@ -14,20 +17,20 @@ class Contato extends StatelessWidget {
       ),
       body: Container(
         padding: EdgeInsets.only(
-          top: 60,
-          left: 40,
-          right: 40,
+          top: 40,
+          left: 20,
+          right: 20,
         ),
         color: Colors.white,
         child: ListView(
           children: <Widget>[
             SizedBox(
-              width: 128,
-              height: 128,
+              width: 108,
+              height: 108,
               child: Image.asset("assets/imagens/logo.png")
             ),
             SizedBox(
-              height: 20,
+              height: 5,
             ),
             
             TextFormField(
@@ -37,7 +40,7 @@ class Contato extends StatelessWidget {
               labelStyle: TextStyle(
                 color: Colors.black38,
                 fontWeight: FontWeight.w400,
-                fontSize: 20,
+                fontSize: 15,
               ),
             ),
             style: TextStyle(
@@ -45,7 +48,7 @@ class Contato extends StatelessWidget {
               ),
             ),
               SizedBox(
-              height: 10,
+              height: 5,
             ),
              TextFormField(
             keyboardType: TextInputType.emailAddress,
@@ -54,7 +57,7 @@ class Contato extends StatelessWidget {
               labelStyle: TextStyle(
                 color: Colors.black38,
                 fontWeight: FontWeight.w400,
-                fontSize: 20,
+                fontSize: 15,
                 ),
               ),
                style: TextStyle(
@@ -62,7 +65,7 @@ class Contato extends StatelessWidget {
               ),
             ),
               SizedBox(
-              height: 10,
+              height: 5,
             ),
               TextFormField(
             keyboardType: TextInputType.phone,
@@ -71,7 +74,7 @@ class Contato extends StatelessWidget {
               labelStyle: TextStyle(
                 color: Colors.black38,
                 fontWeight: FontWeight.w400,
-                fontSize: 20,
+                fontSize: 15,
               ),
             ),
             style: TextStyle(
@@ -79,7 +82,7 @@ class Contato extends StatelessWidget {
               ),
             ),
               SizedBox(
-              height: 10,
+              height: 5,
             ),
               TextFormField(              
               keyboardType: TextInputType.text,
@@ -89,7 +92,7 @@ class Contato extends StatelessWidget {
                 labelStyle: TextStyle(
                   color: Colors.black38,
                   fontWeight: FontWeight.w400,
-                  fontSize: 20,
+                  fontSize: 15,
                  
               ),
             ),
@@ -98,15 +101,16 @@ class Contato extends StatelessWidget {
               ),
             ),
               SizedBox(
-              height: 10,
+              height: 5,
             ),
             
              
             SizedBox(
-              height: 40,
+              height: 10,
             ),
             Container(
-              height: 60,
+              height: 30,
+              width: 150,
               alignment: Alignment.center,
               
              child: SizedBox.expand(
@@ -125,20 +129,46 @@ class Contato extends StatelessWidget {
                   ],
                  ),
                  onPressed: () => {
-                  Navigator.pushNamed(context, '/pagina6'),
-                 },
-                ),
-              ),
+                  Navigator.push(context, new MaterialPageRoute(builder: (context) => new Descricao())
+                  ),                
+               },
+            ),            
+          ),          
+        ), 
+                  SizedBox(
+                  height: 15,
+                  ),
+
+                  Container(
+                  height: 30,
+                  width: 150,
+                  alignment: Alignment.center,
               
-            ),
-    
-          ],
+                  child: SizedBox.expand(
+                    child: RaisedButton(
+                      child: Row(
+                        children: <Widget>[
+                        Text(
+                        "Voltar",
+                        style: TextStyle(                    
+                        fontWeight: FontWeight.normal,                                                
+                        fontSize: 15,
+                        
+                        
+                      ),
+                      
+                    ),
+                  ],
+                 ),
+                 onPressed: () => {
+                  Navigator.pop(context),
+                 }
+               ),
+               ),
+         ), ],
         ),
-      ),
+        ),
     );
+  
   }
 }
-
-
-
-
