@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_p1/contato.dart';
 
 
 class Profissionais extends StatelessWidget {
-  static String tag = 'profissionais';
+  static String tag = '/pagina4';
+  
   
 @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Profissionais Cadastrados"),
-          backgroundColor: Colors.grey,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Ache o profissional adequado"),
+        backgroundColor: Colors.grey,
+        automaticallyImplyLeading: false,
         ),
-        body: ListView1(),
-      ),
-    );
+        body: ListView1());
+      
+    
   }
 }
 
@@ -37,7 +38,7 @@ class ListView1 extends StatelessWidget {
             height: 20,
           ),
           Text(
-            "Serviços Cadastros",
+            "Profissionais Cadastrados",
             style: TextStyle(fontSize: 30),
           ),
           SizedBox(
@@ -81,7 +82,7 @@ class ListView1 extends StatelessWidget {
             subtitle: Text("Artigos para festa"),
             trailing: Icon(Icons.edit),
             children: <Widget>[
-              Text("Av. Leais Paulista, 880Tel: 3629-5963"),
+              Text("Av. Leais Paulista, 880 - Tel: 3629-5963"),
             ],
           ),
           ExpansionTile(
@@ -96,16 +97,19 @@ class ListView1 extends StatelessWidget {
           ],   
           ),
           
-            Padding(padding: EdgeInsets.only(bottom: 60),), 
+            Padding(padding: EdgeInsets.only(bottom: 40),), 
 
             RaisedButton(
               child: Text("Próxima"),
               onPressed: () {
                 
-                Navigator.pushNamed(context, '/pagina5');
+                Navigator.push(context, MaterialPageRoute(builder: (context) =>
+                 Contato())
+                );
               },
-            ),           
+            ),
             
+              SizedBox(height: 5,),
               
             RaisedButton(
               child: Text("Voltar"),
@@ -115,7 +119,9 @@ class ListView1 extends StatelessWidget {
             ),
         ],
       ),
+    
     );
+  
      
   }
 }
