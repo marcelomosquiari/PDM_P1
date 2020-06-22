@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class LoginPage extends StatelessWidget{
-  static String tag = 'page_login';
+  static String tag = '/pagina1';
+  
   
   @override
   Widget build(BuildContext context) {
@@ -63,22 +64,33 @@ class LoginPage extends StatelessWidget{
               alignment: Alignment.center,
               
              child: SizedBox.expand(
-              child: RaisedButton(
+              child: RaisedButton(                
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
+                    
                     Text(
-                      "Login",
+                      "Login",                      
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
-                        fontSize: 20,
+                        fontSize: 20,                        
                       ),
-                      textAlign: TextAlign.center,
+                      textAlign: TextAlign.left,
                     ),
+                    SizedBox(
+                        child: Image.asset("assets/imagens/icon.png"),
+                        height: 28,
+                        width: 28,
+                      ),
+                    
                   ],
                  ),
                  onPressed: () => {
                   Navigator.pushNamed(context, '/pagina2'),
+              
+                    
+
                  },
                 ),
               ),
