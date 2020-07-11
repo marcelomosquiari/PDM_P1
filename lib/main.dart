@@ -27,5 +27,6 @@ void main() {
           '/pagina6': (context) => Descricao()
           
         }),
-  );
+  );  
 }
+
